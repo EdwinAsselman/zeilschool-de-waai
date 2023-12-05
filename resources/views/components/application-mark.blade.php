@@ -1,1 +1,1 @@
-<img width="100px" height="100px" src="{{ asset('storage/images/zeilschool de waai.png') }}" alt="Zeilschool de Waai" />
+<img width="64px" height="64px" src="{{ asset('storage/images/zeilschool de waai.png') }}" alt="Zeilschool de Waai" />

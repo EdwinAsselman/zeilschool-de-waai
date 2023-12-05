@@ -13,15 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Main homepage of the application.
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
+// COURSES
+Route::get('/cursussen', function () {
+    return view('cursussen');
+})->name('cursussen');
+
+// Contact page.
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+// DASHBOARD
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

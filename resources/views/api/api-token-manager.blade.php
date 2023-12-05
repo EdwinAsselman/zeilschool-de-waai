@@ -39,9 +39,9 @@
                 {{ __('Created.') }}
             </x-action-message>
 
-            <x-button>
+            <x-button.primary>
                 {{ __('Create') }}
-            </x-button>
+            </x-button.primary>
         </x-slot>
     </x-form-section>
 
@@ -140,9 +140,9 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-button class="ml-3" wire:click="updateApiToken" wire:loading.attr="disabled">
+            <x-button.primary class="ml-3" wire:click="updateApiToken" wire:loading.attr="disabled">
                 {{ __('Save') }}
-            </x-button>
+            </x-button.primary>
         </x-slot>
     </x-dialog-modal>
 
