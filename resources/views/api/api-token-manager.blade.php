@@ -112,9 +112,9 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$set('displayingToken', false)" wire:loading.attr="disabled">
+            <x-button.secondary wire:click="$set('displayingToken', false)" wire:loading.attr="disabled">
                 {{ __('Close') }}
-            </x-secondary-button>
+            </x-button.secondary>
         </x-slot>
     </x-dialog-modal>
 
@@ -136,9 +136,9 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$set('managingApiTokenPermissions', false)" wire:loading.attr="disabled">
+            <x-button.secondary wire:click="$set('managingApiTokenPermissions', false)" wire:loading.attr="disabled">
                 {{ __('Cancel') }}
-            </x-secondary-button>
+            </x-button.secondary>
 
             <x-button.primary class="ml-3" wire:click="updateApiToken" wire:loading.attr="disabled">
                 {{ __('Save') }}
@@ -157,13 +157,13 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$toggle('confirmingApiTokenDeletion')" wire:loading.attr="disabled">
+            <x-button.secondary wire:click="$toggle('confirmingApiTokenDeletion')" wire:loading.attr="disabled">
                 {{ __('Cancel') }}
-            </x-secondary-button>
+            </x-button.secondary>
 
-            <x-danger-button class="ml-3" wire:click="deleteApiToken" wire:loading.attr="disabled">
+            <x-button.warning class="ml-3" wire:click="deleteApiToken" wire:loading.attr="disabled">
                 {{ __('Delete') }}
-            </x-danger-button>
+            </x-button.warning>
         </x-slot>
     </x-confirmation-modal>
 </div>

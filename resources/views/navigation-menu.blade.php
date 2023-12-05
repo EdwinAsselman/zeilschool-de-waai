@@ -69,13 +69,13 @@
                         </x-dropdown>
                     {{-- If user is not authenticated, show login and sign up links. --}}
                     @else
-                        <x-button.link bgColor="teal" route="login">
-                           login
-                        </x-button.link>
+                        <x-nav-link href="{{ route('login') }}">
+                            {{ __('Login') }}
+                        </x-nav-link>
 
-                        <x-button.link bgColor="teal" route="register">
-                           sign up
-                        </x-button.link>
+                         <x-nav-link href="{{ route('register') }}">
+                            {{ __('Register') }}
+                        </x-nav-link>
                     @endauth
                 </div>
             </div>
